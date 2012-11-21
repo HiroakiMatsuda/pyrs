@@ -1,10 +1,10 @@
 pyrs
 ======================
-pyrs‚Í‘o—t“dŽqH‹ÆiŠ”j‚ÌƒRƒ}ƒ“ƒh•ûŽ®ƒT[ƒ{‚Å‚ ‚é[RSƒVƒŠ[ƒY][futaba]‚ð§Œä‚·‚éPython Script‚Å‚·B 
+pyrsï¿½Í‘oï¿½tï¿½dï¿½qï¿½Hï¿½Æiï¿½ï¿½ï¿½jï¿½ÌƒRï¿½}ï¿½ï¿½ï¿½hï¿½ï¿½Tï¿½[ï¿½{ï¿½Å‚ï¿½ï¿½ï¿½[RSï¿½Vï¿½ï¿½ï¿½[ï¿½Y][futaba]ï¿½ð§Œä‚·ï¿½ï¿½Python Scriptï¿½Å‚ï¿½ï¿½B 
 
 [futaba]: http://www.futaba.co.jp/robot/command_type_servos/index.html
 
-“®ìŠm”FŠÂ‹«
+ï¿½ï¿½ï¿½ï¿½mï¿½Fï¿½Â‹ï¿½
 ------
 Python:  
 2.6.6  
@@ -19,21 +19,21 @@ RS301, 302, 303, 405
 Serial:  
  [RSC-U485](:http://www.futaba.co.jp/robot/rsc/index.html)  
 
-ŠeƒRƒ}ƒ“ƒh‚ÍˆÈ‰º‚Ì[Žæ‚èˆµ‚¢à–¾‘](:http://www.futaba.co.jp/robot/download/manuals.html)‚É]‚Á‚Ä‚¢‚Ü‚·B   
-RS405CB/RS406CBŽæˆµà–¾‘iver.1.01j  
-RS301CR/RS302CDŽæˆµà–¾‘iver.1.14j  
-RS303MR/RS304MDŽæˆµà–¾‘iver.1.13j  
+ï¿½eï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½ÍˆÈ‰ï¿½ï¿½ï¿½[ï¿½ï¿½èˆµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½](:http://www.futaba.co.jp/robot/download/manuals.html)ï¿½É]ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B   
+RS405CB/RS406CBï¿½æˆµï¿½ï¿½ï¿½ï¿½ï¿½iver.1.01ï¿½j  
+RS301CR/RS302CDï¿½æˆµï¿½ï¿½ï¿½ï¿½ï¿½iver.1.14ï¿½j  
+RS303MR/RS304MDï¿½æˆµï¿½ï¿½ï¿½ï¿½ï¿½iver.1.13ï¿½j  
  
-Žg‚¢•û
+ï¿½gï¿½ï¿½ï¿½ï¿½
 ------
-###1. pySerial‚ðƒCƒ“ƒXƒg[ƒ‹‚·‚é###
-pyrs‚Í[pySerial](:http://pyserial.sourceforge.net/)‚ðŽg—p‚µ‚ÄƒVƒŠƒAƒ‹’ÊM‚ðs‚È‚Á‚Ä‚¢‚Ü‚·B  
-pySerial‚ªƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚Ä‚¢‚È‚¢ê‡‚ÍAƒCƒ“ƒXƒg[ƒ‹‚µ‚Ä‚©‚çŽÀs‚µ‚Ä‰º‚³‚¢B  
+###1. pySerialï¿½ï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½###
+pyrsï¿½ï¿½[pySerial](:http://pyserial.sourceforge.net/)ï¿½ï¿½gï¿½pï¿½ï¿½ï¿½ÄƒVï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ÊMï¿½ï¿½sï¿½È‚ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B  
+pySerialï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½ê‡ï¿½ÍAï¿½Cï¿½ï¿½ï¿½Xï¿½gï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½Ä‰ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B  
 
-###2. Python Shell‚©‚çƒT[ƒ{‚ð“®‚©‚µ‚Ä‚Ý‚é###
-Python Shell‚©‚çƒT[ƒ{ƒ‚[ƒ^iID :1j‚ð“®‚©‚µ‚Ä‚Ý‚Ü‚·  
-'COM1'‚Ì•”•ª‚ÍŽ©•ª‚ÌŠÂ‹«‚É‡‚í‚¹‚Äƒ|[ƒg‚ðÝ’è‚µ‚Ä‚­‚¾‚³‚¢  
-```pyton  
+###2. Python Shellï¿½ï¿½ï¿½ï¿½Tï¿½[ï¿½{ï¿½ð“®‚ï¿½ï¿½ï¿½ï¿½Ä‚Ý‚ï¿½###
+Python Shellï¿½ï¿½ï¿½ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½iID :1ï¿½jï¿½ð“®‚ï¿½ï¿½ï¿½ï¿½Ä‚Ý‚Ü‚ï¿½  
+'COM1'ï¿½Ì•ï¿½ï¿½ï¿½ï¿½ÍŽï¿½ï¿½ï¿½ï¿½ÌŠÂ‹ï¿½ï¿½Éï¿½ï¿½í‚¹ï¿½Äƒ|ï¿½[ï¿½gï¿½ï¿½Ý’è‚µï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
+```python  
 import pyrs  
 import time  
 rs = pyrs.Rs()  
@@ -46,152 +46,152 @@ time.sleep(1)
 rs.torque_on(1, 0)  
 rs.close_port()  
 ```  
-ˆÈã‚Ì‚æ‚¤‚ÉŠÈ’P‚ÉƒT[ƒ{ƒ‚[ƒ^‚ð§Œä‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B  
+ï¿½Èï¿½Ì‚æ‚¤ï¿½ÉŠÈ’Pï¿½ÉƒTï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½ð§Œä‚·ï¿½é‚±ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½B  
 
-###3. ƒƒ\ƒbƒh‚ÌŽg‚¢•û###
+###3. ï¿½ï¿½ï¿½\ï¿½bï¿½hï¿½ÌŽgï¿½ï¿½ï¿½ï¿½###
 
     def open_port(port, baudrate, timeout)
-ƒVƒŠƒAƒ‹ƒ|[ƒg‚ðŠJ‚«‚Ü‚·  
- E `port` :  
-    ƒ|[ƒg‚Ì”Ô†‚ÌŽw’èB'COM1'‚â'/tty/usb0'‚Ì‚æ‚¤‚ÉŽw’è  
- E   `baudrate` :  
-    ƒ{[ƒhƒŒ[ƒg‚ÌŽw’èBƒT[ƒ{‚Æ“¯‚¶ƒ{[ƒhƒŒ[ƒg‚ðŽw’è‚µ‚Ä‰º‚³‚¢   
- E   `timeout` :  
-    “Ç‚ÝŽæ‚èŽž‚Ìƒ^ƒCƒ€ƒAƒEƒgÝ’è  
-    None:“Ç‚ÝŽæ‚ê‚é‚Ü‚Å‘Ò‚¿‚Ü‚·
-    0:”ñƒuƒƒbƒLƒ“ƒOƒ‚[ƒhi“Ç‚ÝŽæ‚èŽž‚É‚·‚®–ß‚è‚Ü‚·j 
-    x:x [sec]‘Ò‚¿‚Ü‚·  
-  E  `return` :    
-    –ß‚è’l‚È‚µ@@
+ï¿½Vï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½|ï¿½[ï¿½gï¿½ï¿½Jï¿½ï¿½ï¿½Ü‚ï¿½  
+ ï¿½E `port` :  
+    ï¿½|ï¿½[ï¿½gï¿½Ì”Ôï¿½ï¿½ÌŽwï¿½ï¿½B'COM1'ï¿½ï¿½'/tty/usb0'ï¿½Ì‚æ‚¤ï¿½ÉŽwï¿½ï¿½  
+ ï¿½E   `baudrate` :  
+    ï¿½{ï¿½[ï¿½hï¿½ï¿½ï¿½[ï¿½gï¿½ÌŽwï¿½ï¿½Bï¿½Tï¿½[ï¿½{ï¿½Æ“ï¿½ï¿½ï¿½ï¿½{ï¿½[ï¿½hï¿½ï¿½ï¿½[ï¿½gï¿½ï¿½wï¿½è‚µï¿½Ä‰ï¿½ï¿½ï¿½ï¿½ï¿½   
+ ï¿½E   `timeout` :  
+    ï¿½Ç‚ÝŽï¿½èŽžï¿½Ìƒ^ï¿½Cï¿½ï¿½ï¿½Aï¿½Eï¿½gï¿½Ý’ï¿½  
+    None:ï¿½Ç‚ÝŽï¿½ï¿½ï¿½Ü‚Å‘Ò‚ï¿½ï¿½Ü‚ï¿½
+    0:ï¿½ï¿½uï¿½ï¿½ï¿½bï¿½Lï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½[ï¿½hï¿½iï¿½Ç‚ÝŽï¿½èŽžï¿½É‚ï¿½ï¿½ï¿½ï¿½ß‚ï¿½Ü‚ï¿½ï¿½j 
+    x:x [sec]ï¿½Ò‚ï¿½ï¿½Ü‚ï¿½  
+  ï¿½E  `return` :    
+    ï¿½ß‚ï¿½lï¿½È‚ï¿½ï¿½@ï¿½@
   
     def close_port()
-ƒVƒŠƒAƒ‹ƒ|[ƒg‚ð•Â‚¶‚Ü‚·  
-  E  `return` :    
-    –ß‚è’l‚È‚µ@
+ï¿½Vï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½|ï¿½[ï¿½gï¿½ï¿½Â‚ï¿½ï¿½Ü‚ï¿½  
+  ï¿½E  `return` :    
+    ï¿½ß‚ï¿½lï¿½È‚ï¿½ï¿½@
  
     def set_port(baudrate, timeout)
-ƒVƒŠƒAƒ‹ƒ|[ƒg‚ðÄÝ’è‚µ‚Ü‚·  
- E  `baudrate` :  
-    ƒ{[ƒhƒŒ[ƒg‚ÌŽw’èBƒT[ƒ{‚Æ“¯‚¶ƒ{[ƒhƒŒ[ƒg‚ðŽw’è‚µ‚Ä‰º‚³‚¢   
- E  `timeout` :  
-    “Ç‚ÝŽæ‚èŽž‚Ìƒ^ƒCƒ€ƒAƒEƒgÝ’è  
-    None:“Ç‚ÝŽæ‚ê‚é‚Ü‚Å‘Ò‚¿‚Ü‚·
-    0:”ñƒuƒƒbƒLƒ“ƒOƒ‚[ƒhi“Ç‚ÝŽæ‚èŽž‚É‚·‚®–ß‚è‚Ü‚·j 
-    x:x [sec]‘Ò‚¿‚Ü‚·
+ï¿½Vï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½|ï¿½[ï¿½gï¿½ï¿½ÄÝ’è‚µï¿½Ü‚ï¿½  
+ ï¿½E  `baudrate` :  
+    ï¿½{ï¿½[ï¿½hï¿½ï¿½ï¿½[ï¿½gï¿½ÌŽwï¿½ï¿½Bï¿½Tï¿½[ï¿½{ï¿½Æ“ï¿½ï¿½ï¿½ï¿½{ï¿½[ï¿½hï¿½ï¿½ï¿½[ï¿½gï¿½ï¿½wï¿½è‚µï¿½Ä‰ï¿½ï¿½ï¿½ï¿½ï¿½   
+ ï¿½E  `timeout` :  
+    ï¿½Ç‚ÝŽï¿½èŽžï¿½Ìƒ^ï¿½Cï¿½ï¿½ï¿½Aï¿½Eï¿½gï¿½Ý’ï¿½  
+    None:ï¿½Ç‚ÝŽï¿½ï¿½ï¿½Ü‚Å‘Ò‚ï¿½ï¿½Ü‚ï¿½
+    0:ï¿½ï¿½uï¿½ï¿½ï¿½bï¿½Lï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½[ï¿½hï¿½iï¿½Ç‚ÝŽï¿½èŽžï¿½É‚ï¿½ï¿½ï¿½ï¿½ß‚ï¿½Ü‚ï¿½ï¿½j 
+    x:x [sec]ï¿½Ò‚ï¿½ï¿½Ü‚ï¿½
 
     def torqur_on(id, mode)
-ƒT[ƒ{‚Ìƒgƒ‹ƒNÝ’è‚ðs‚¢‚Ü‚·  
- E  `id` :  
-    Ý’è‚ðs‚¤ƒT[ƒ{ƒ‚[ƒ^‚ÌID‚ðŽw’è‚µ‚Ü‚·BID‚Í1~127‚ÌŠÔ‚ÅŽw’è‚·‚é•K—v‚ª‚ ‚è‚Ü‚·  
- E  `mode` :  
-    ƒgƒ‹ƒN•ÛŽƒ‚[ƒh‚ð‘I‚Ñ‚Ü‚·  
-    0:ƒgƒ‹ƒN‚ðƒIƒt‚É‚µ‚Ü‚·
-    1:ƒgƒ‹ƒN‚ðƒIƒ“‚É‚µ‚Ü‚· 
-    2:ƒuƒŒ[ƒLƒ‚[ƒh‚É‚µ‚Ü‚·  
- E  `return` :    
-    (id, 'ACK'):³í‚É–½—ß‚ª“`’B‚Ä‚¢‚Ü‚·  
-    (id, 'NACK)':ƒRƒ}ƒ“ƒh‚ª³‚µ‚­Ý’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñi’Êí‚Ì—˜—p‚Å‚ÍŒ©‚é‚±‚Æ‚Í‚È‚¢‚Å‚µ‚å‚¤j  
-    (id, 'unReadable'):’ÊMŠÂ‹«‚ÉˆÈã‚ª‚ ‚è‚Ü‚·B‘½‚­‚Ìê‡ƒT[ƒ{ƒ‚[ƒ^‚Ì“dŒ¹‚ªØ‚ê‚Ä‚¢‚é‚È‚Ç‚ÌŒ´ˆö‚ªl‚¦‚ç‚ê‚Ü‚· 
+ï¿½Tï¿½[ï¿½{ï¿½Ìƒgï¿½ï¿½ï¿½Nï¿½Ý’ï¿½ï¿½sï¿½ï¿½ï¿½Ü‚ï¿½  
+ ï¿½E  `id` :  
+    ï¿½Ý’ï¿½ï¿½sï¿½ï¿½ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½ï¿½wï¿½è‚µï¿½Ü‚ï¿½ï¿½BIDï¿½ï¿½1~127ï¿½ÌŠÔ‚ÅŽwï¿½è‚·ï¿½ï¿½Kï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½  
+ ï¿½E  `mode` :  
+    ï¿½gï¿½ï¿½ï¿½Nï¿½ÛŽï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½Iï¿½Ñ‚Ü‚ï¿½  
+    0:ï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½Iï¿½tï¿½É‚ï¿½ï¿½Ü‚ï¿½
+    1:ï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½Iï¿½ï¿½ï¿½É‚ï¿½ï¿½Ü‚ï¿½ 
+    2:ï¿½uï¿½ï¿½ï¿½[ï¿½Lï¿½ï¿½ï¿½[ï¿½hï¿½É‚ï¿½ï¿½Ü‚ï¿½  
+ ï¿½E  `return` :    
+    (id, 'ACK'):ï¿½ï¿½ï¿½ï¿½É–ï¿½ï¿½ß‚ï¿½ï¿½`ï¿½Bï¿½Ä‚ï¿½ï¿½Ü‚ï¿½  
+    (id, 'NACK)':ï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý’è‚³ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½iï¿½Êï¿½Ì—ï¿½ï¿½pï¿½Å‚ÍŒï¿½ï¿½é‚±ï¿½Æ‚Í‚È‚ï¿½ï¿½Å‚ï¿½ï¿½å‚¤ï¿½j  
+    (id, 'unReadable'):ï¿½ÊMï¿½Â‹ï¿½ï¿½ÉˆÈã‚ªï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½Ìê‡ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì“dï¿½ï¿½ï¿½ï¿½ï¿½Ø‚ï¿½Ä‚ï¿½ï¿½ï¿½È‚Ç‚ÌŒï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ 
 
     def target_position(id, position, time)
-ƒT[ƒ{‚ÌˆÚ“®–½—ß‚ðo‚µ‚Ü‚·    
- E  `id` :  
-    Ý’è‚ðs‚¤ƒT[ƒ{ƒ‚[ƒ^‚ÌID‚ðŽw’è‚µ‚Ü‚·BID‚Í1~127‚ÌŠÔ‚ÅŽw’è‚·‚é•K—v‚ª‚ ‚è‚Ü‚·   
- E  `position` :  
-    ˆÚ“®ˆÊ’u‚ðŽw’è‚µ‚Ü‚·B-1500`1500 [0.1 deg]‚ÌŠÔ‚ÅŽw’è‚·‚é•K—v‚ª‚ ‚è‚Ü‚·    
-E  `time` :  
-    ˆÚ“®ŽžŠÔ‚ðŽw’è‚µ‚Ü‚·B0~16383 [msec]‚ÌŠÔ‚ÅŽw’è‚µ‚Ü‚·B0‚ÍÅ‘å‘¬“x‚ÅˆÚ“®‚É‚È‚è‚Ü‚·  
- E  `return` :    
-    (id, 'ACK'):³í‚É–½—ß‚ª“`’B‚Ä‚¢‚Ü‚·  
-    (id, 'NACK)':ƒRƒ}ƒ“ƒh‚ª³‚µ‚­Ý’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñi’Êí‚Ì—˜—p‚Å‚ÍŒ©‚é‚±‚Æ‚Í‚È‚¢‚Å‚µ‚å‚¤j  
-    (id, 'unReadable'):’ÊMŠÂ‹«‚ÉˆÈã‚ª‚ ‚è‚Ü‚·B‘½‚­‚Ìê‡ƒT[ƒ{ƒ‚[ƒ^‚Ì“dŒ¹‚ªØ‚ê‚Ä‚¢‚é‚È‚Ç‚ÌŒ´ˆö‚ªl‚¦‚ç‚ê‚Ü‚·  
+ï¿½Tï¿½[ï¿½{ï¿½ÌˆÚ“ï¿½ï¿½ï¿½ï¿½ß‚ï¿½oï¿½ï¿½ï¿½Ü‚ï¿½    
+ ï¿½E  `id` :  
+    ï¿½Ý’ï¿½ï¿½sï¿½ï¿½ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½ï¿½wï¿½è‚µï¿½Ü‚ï¿½ï¿½BIDï¿½ï¿½1~127ï¿½ÌŠÔ‚ÅŽwï¿½è‚·ï¿½ï¿½Kï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½   
+ ï¿½E  `position` :  
+    ï¿½Ú“ï¿½ï¿½Ê’uï¿½ï¿½wï¿½è‚µï¿½Ü‚ï¿½ï¿½B-1500ï¿½`1500 [0.1 deg]ï¿½ÌŠÔ‚ÅŽwï¿½è‚·ï¿½ï¿½Kï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½    
+ï¿½E  `time` :  
+    ï¿½Ú“ï¿½ï¿½ï¿½ï¿½Ô‚ï¿½wï¿½è‚µï¿½Ü‚ï¿½ï¿½B0~16383 [msec]ï¿½ÌŠÔ‚ÅŽwï¿½è‚µï¿½Ü‚ï¿½ï¿½B0ï¿½ÍÅ‘å‘¬ï¿½xï¿½ÅˆÚ“ï¿½ï¿½É‚È‚ï¿½Ü‚ï¿½  
+ ï¿½E  `return` :    
+    (id, 'ACK'):ï¿½ï¿½ï¿½ï¿½É–ï¿½ï¿½ß‚ï¿½ï¿½`ï¿½Bï¿½Ä‚ï¿½ï¿½Ü‚ï¿½  
+    (id, 'NACK)':ï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý’è‚³ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½iï¿½Êï¿½Ì—ï¿½ï¿½pï¿½Å‚ÍŒï¿½ï¿½é‚±ï¿½Æ‚Í‚È‚ï¿½ï¿½Å‚ï¿½ï¿½å‚¤ï¿½j  
+    (id, 'unReadable'):ï¿½ÊMï¿½Â‹ï¿½ï¿½ÉˆÈã‚ªï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½Ìê‡ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì“dï¿½ï¿½ï¿½ï¿½ï¿½Ø‚ï¿½Ä‚ï¿½ï¿½ï¿½È‚Ç‚ÌŒï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½  
 
     def multi_torque_on(servi_data)
-ƒT[ƒ{‚Ìƒgƒ‹ƒNÝ’è‚ð•¡”ŒÂ“¯Žž‚És‚¢‚Ü‚·    
- E  `servo_data` :    
-    ƒŠƒXƒgŒ^‚Ìƒf[ƒ^‚Å[[id1, mode1], [id2, mode2].....]‚Ì‚æ‚¤‚ÉÝ’è‚µ‚Ü‚·   
- E  `return`:  
-    'multi_torque_on: + str(servo_data)'‚ª•Ô‚³‚ê‚Ü‚·
+ï¿½Tï¿½[ï¿½{ï¿½Ìƒgï¿½ï¿½ï¿½Nï¿½Ý’ï¿½ð•¡ï¿½ï¿½Â“ï¿½ï¿½ï¿½ï¿½Ésï¿½ï¿½ï¿½Ü‚ï¿½    
+ ï¿½E  `servo_data` :    
+    ï¿½ï¿½ï¿½Xï¿½gï¿½^ï¿½Ìƒfï¿½[ï¿½^ï¿½ï¿½[[id1, mode1], [id2, mode2].....]ï¿½Ì‚æ‚¤ï¿½ÉÝ’è‚µï¿½Ü‚ï¿½   
+ ï¿½E  `return`:  
+    'multi_torque_on: + str(servo_data)'ï¿½ï¿½ï¿½Ô‚ï¿½ï¿½ï¿½Ü‚ï¿½
     
     def multi_target_position(servo_data)
-ƒT[ƒ{‚ÌˆÚ“®–½—ß‚ð•¡”ŒÂ“¯Žž‚És‚¢‚Ü‚·  
- E  `servo_data` :    
-    ƒŠƒXƒgŒ^‚Ìƒf[ƒ^‚Å[[id1, position1, time1], [id2, position2, time2].....]‚Ì‚æ‚¤‚ÉÝ’è‚µ‚Ü‚·   
- E  `return`:  
-    'multi_torque_on: + str(servo_data)'‚ª•Ô‚³‚ê‚Ü‚·
+ï¿½Tï¿½[ï¿½{ï¿½ÌˆÚ“ï¿½ï¿½ï¿½ï¿½ß‚ð•¡ï¿½ï¿½Â“ï¿½ï¿½ï¿½ï¿½Ésï¿½ï¿½ï¿½Ü‚ï¿½  
+ ï¿½E  `servo_data` :    
+    ï¿½ï¿½ï¿½Xï¿½gï¿½^ï¿½Ìƒfï¿½[ï¿½^ï¿½ï¿½[[id1, position1, time1], [id2, position2, time2].....]ï¿½Ì‚æ‚¤ï¿½ÉÝ’è‚µï¿½Ü‚ï¿½   
+ ï¿½E  `return`:  
+    'multi_torque_on: + str(servo_data)'ï¿½ï¿½ï¿½Ô‚ï¿½ï¿½ï¿½Ü‚ï¿½
 
     def get_data(id, mode)  
-ƒT[ƒ{ƒ‚[ƒ^‚ÌƒZƒ“ƒTƒf[ƒ^‚ðŽæ“¾‚µ‚Ü‚·  
- E  `id` :  
-    Ý’è‚ðs‚¤ƒT[ƒ{ƒ‚[ƒ^‚ÌID‚ðŽw’è‚µ‚Ü‚·BID‚Í1~127‚ÌŠÔ‚ÅŽw’è‚·‚é•K—v‚ª‚ ‚è‚Ü‚·      
-E  `mode` :  
-    ƒŠƒ^[ƒ“‚³‚¹‚éƒZƒ“ƒT’l‚ðÝ’è‚µ‚Ü‚·B  
-‚½‚¾‚µƒT[ƒ{‚ÌŽd—lãAŽæ“¾‚·‚éƒZƒ“ƒT’l‚ð‘I‘ð‚µ‚Ä‚à‘S‚Ä‚ÌƒZƒ“ƒT’l‚ªƒT[ƒ{‚©‚ç•Ô‚³‚ê‚Ü‚·B
-ƒ‚[ƒh‘I‘ð‚Í‚»‚ê‚ðƒtƒBƒ‹ƒ^ƒŠƒ“ƒO‚µ‚Ä‚¢‚é‚É‰ß‚¬‚Ü‚¹‚ñB  
-    'all', ‚·‚×‚Ä‚ÌƒZƒ“ƒT’l‚ð•Ô‚µ‚Ü‚·    
-    'angle', Œ»ÝˆÊ’u [0.1 deg]‚ð•Ô‚µ‚Ü‚·  
-    'time', Œ»ÝŽžŠÔ [0.1 sec]‚ð•Ô‚µ‚Ü‚·BŒ»ÝŽžŠÔ‚ÍƒT[ƒ{‚ªŽw—ß‚ðŽóM‚µAˆÚ“®‚ðŠJŽn‚µ‚Ä‚©‚ç‚ÌŒo‰ßŽžŠÔ‚Å‚·   
-    'speed', Œ»ÝƒXƒs[ƒh [deg / sec]‚ð•Ô‚µ‚Ü‚·BŒ»Ý‚Ì‰ñ“]ƒXƒs[ƒh‚ðŽæ“¾‚Å‚«‚Ü‚·‚ªA‚±‚Ì’l‚Í–ÚˆÀ‚Å‚·B  
-    'load', Œ»Ý•‰‰× [mA]‚ð•Ô‚µ‚Ü‚·BƒT[ƒ{‚É‹Ÿ‹‹‚³‚ê‚Ä‚¢‚é“d—¬‚ð•Ô‚µ‚Ü‚·‚ªA‚±‚Ì’l‚Í–ÚˆÀ‚Å‚·B    
-    'timepreture', Œ»Ý‰·“x [degree celsius]‚ð•Ô‚µ‚Ü‚·B‚±‚Ì’l‚ÍƒZƒ“ƒT‚ÌŒÂ‘Ì·‚É‚æ‚è}3 [degree celsius] ’ö“x‚ÌŒë·‚ª‚ ‚è‚Ü‚·     
-    'voltage', Œ»Ý“dˆ³ [10 mV]‚ð•Ô‚µ‚Ü‚·B‚±‚Ì’l‚ÍƒZƒ“ƒT‚ÌŒÂ‘Ì·‚É‚æ‚è}0.3 [V]’ö“x‚ÌŒë·‚ª‚ ‚è‚Ü‚·    
-    'list', ‘I‘ðo—ˆ‚éƒ‚[ƒhˆê——‚ð•Ô‚µ‚Ü‚·iƒZƒ“ƒT’l‚Ì•Ô“š‚Í‚ ‚è‚Ü‚¹‚ñBƒ‚[ƒhŠm”F—p‚Å‚·j  
- E  `return` :  
-    list:Žg—po—ˆ‚éƒ‚[ƒhˆê——‚ð•Ô‚³‚ê‚Ü‚·  
-    (id, angle, time, speed, load, tempreture, voltage):‘S‚Ä‚ÌƒZƒ“ƒT’l‚ð•Ô‚³‚ê‚Ü‚·    
-    (id, sens_value):ID‚Æ‘I‘ð‚µ‚½ƒ‚[ƒh‚É‘Î‰ž‚·‚éƒZƒ“ƒT’l‚ð•Ô‚³‚ê‚Ü‚·  
+ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½ÌƒZï¿½ï¿½ï¿½Tï¿½fï¿½[ï¿½^ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½Ü‚ï¿½  
+ ï¿½E  `id` :  
+    ï¿½Ý’ï¿½ï¿½sï¿½ï¿½ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½ï¿½wï¿½è‚µï¿½Ü‚ï¿½ï¿½BIDï¿½ï¿½1~127ï¿½ÌŠÔ‚ÅŽwï¿½è‚·ï¿½ï¿½Kï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½      
+ï¿½E  `mode` :  
+    ï¿½ï¿½ï¿½^ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½lï¿½ï¿½Ý’è‚µï¿½Ü‚ï¿½ï¿½B  
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½[ï¿½{ï¿½ÌŽdï¿½lï¿½ï¿½Aï¿½æ“¾ï¿½ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½lï¿½ï¿½Iï¿½ï¿½Ä‚ï¿½Sï¿½Ä‚ÌƒZï¿½ï¿½ï¿½Tï¿½lï¿½ï¿½ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½ï¿½Ô‚ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
+ï¿½ï¿½ï¿½[ï¿½hï¿½Iï¿½ï¿½Í‚ï¿½ï¿½ï¿½ï¿½tï¿½Bï¿½ï¿½ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½É‰ß‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½B  
+    'all', ï¿½ï¿½ï¿½×‚Ä‚ÌƒZï¿½ï¿½ï¿½Tï¿½lï¿½ï¿½Ô‚ï¿½ï¿½Ü‚ï¿½    
+    'angle', ï¿½ï¿½ï¿½ÝˆÊ’u [0.1 deg]ï¿½ï¿½Ô‚ï¿½ï¿½Ü‚ï¿½  
+    'time', ï¿½ï¿½ï¿½ÝŽï¿½ï¿½ï¿½ [0.1 sec]ï¿½ï¿½Ô‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ÝŽï¿½ï¿½Ô‚ÍƒTï¿½[ï¿½{ï¿½ï¿½ï¿½wï¿½ß‚ï¿½ï¿½Mï¿½ï¿½ï¿½Aï¿½Ú“ï¿½ï¿½ï¿½Jï¿½nï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ÌŒoï¿½ßŽï¿½ï¿½Ô‚Å‚ï¿½   
+    'speed', ï¿½ï¿½ï¿½ÝƒXï¿½sï¿½[ï¿½h [deg / sec]ï¿½ï¿½Ô‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½Ý‚Ì‰ï¿½]ï¿½Xï¿½sï¿½[ï¿½hï¿½ï¿½æ“¾ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½Ì’lï¿½Í–Úˆï¿½Å‚ï¿½ï¿½B  
+    'load', ï¿½ï¿½ï¿½Ý•ï¿½ï¿½ï¿½ [mA]ï¿½ï¿½Ô‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½Tï¿½[ï¿½{ï¿½É‹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½dï¿½ï¿½ï¿½ï¿½Ô‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½Ì’lï¿½Í–Úˆï¿½Å‚ï¿½ï¿½B    
+    'timepreture', ï¿½ï¿½ï¿½Ý‰ï¿½ï¿½x [degree celsius]ï¿½ï¿½Ô‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½Ì’lï¿½ÍƒZï¿½ï¿½ï¿½Tï¿½ÌŒÂ‘Ìï¿½ï¿½É‚ï¿½ï¿½}3 [degree celsius] ï¿½ï¿½xï¿½ÌŒë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½     
+    'voltage', ï¿½ï¿½ï¿½Ý“dï¿½ï¿½ [10 mV]ï¿½ï¿½Ô‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½Ì’lï¿½ÍƒZï¿½ï¿½ï¿½Tï¿½ÌŒÂ‘Ìï¿½ï¿½É‚ï¿½ï¿½}0.3 [V]ï¿½ï¿½xï¿½ÌŒë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½    
+    'list', ï¿½Iï¿½ï¿½oï¿½ï¿½ï¿½éƒ‚ï¿½[ï¿½hï¿½ê——ï¿½ï¿½Ô‚ï¿½ï¿½Ü‚ï¿½ï¿½iï¿½Zï¿½ï¿½ï¿½Tï¿½lï¿½Ì•Ô“ï¿½ï¿½Í‚ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½Bï¿½ï¿½ï¿½[ï¿½hï¿½mï¿½Fï¿½pï¿½Å‚ï¿½ï¿½j  
+ ï¿½E  `return` :  
+    list:ï¿½gï¿½pï¿½oï¿½ï¿½ï¿½éƒ‚ï¿½[ï¿½hï¿½ê——ï¿½ï¿½Ô‚ï¿½ï¿½ï¿½Ü‚ï¿½  
+    (id, angle, time, speed, load, tempreture, voltage):ï¿½Sï¿½Ä‚ÌƒZï¿½ï¿½ï¿½Tï¿½lï¿½ï¿½Ô‚ï¿½ï¿½ï¿½Ü‚ï¿½    
+    (id, sens_value):IDï¿½Æ‘Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½É‘Î‰ï¿½ï¿½ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Tï¿½lï¿½ï¿½Ô‚ï¿½ï¿½ï¿½Ü‚ï¿½  
 
     def servo_reset(id)
-ƒT[ƒ{ƒ‚[ƒ^‚ðƒŠƒZƒbƒg‚µ‚Ü‚·  
- E  `id` :    
-    Ý’è‚ðs‚¤ƒT[ƒ{ƒ‚[ƒ^‚ÌID‚ðŽw’è‚µ‚Ü‚·BID‚Í1~127‚ÌŠÔ‚ÅŽw’è‚·‚é•K—v‚ª‚ ‚è‚Ü‚·  
- E  `return` :    
-    (id, 'ACK'):³í‚É–½—ß‚ª“`’B‚Ä‚¢‚Ü‚·  
-    (id, 'NACK)':ƒRƒ}ƒ“ƒh‚ª³‚µ‚­Ý’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñi’Êí‚Ì—˜—p‚Å‚ÍŒ©‚é‚±‚Æ‚Í‚È‚¢‚Å‚µ‚å‚¤j  
-    (id, 'unReadable'):’ÊMŠÂ‹«‚ÉˆÈã‚ª‚ ‚è‚Ü‚·B‘½‚­‚Ìê‡ƒT[ƒ{ƒ‚[ƒ^‚Ì“dŒ¹‚ªØ‚ê‚Ä‚¢‚é‚È‚Ç‚ÌŒ´ˆö‚ªl‚¦‚ç‚ê‚Ü‚·  
+ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½Zï¿½bï¿½gï¿½ï¿½ï¿½Ü‚ï¿½  
+ ï¿½E  `id` :    
+    ï¿½Ý’ï¿½ï¿½sï¿½ï¿½ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½ï¿½wï¿½è‚µï¿½Ü‚ï¿½ï¿½BIDï¿½ï¿½1~127ï¿½ÌŠÔ‚ÅŽwï¿½è‚·ï¿½ï¿½Kï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½  
+ ï¿½E  `return` :    
+    (id, 'ACK'):ï¿½ï¿½ï¿½ï¿½É–ï¿½ï¿½ß‚ï¿½ï¿½`ï¿½Bï¿½Ä‚ï¿½ï¿½Ü‚ï¿½  
+    (id, 'NACK)':ï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý’è‚³ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½iï¿½Êï¿½Ì—ï¿½ï¿½pï¿½Å‚ÍŒï¿½ï¿½é‚±ï¿½Æ‚Í‚È‚ï¿½ï¿½Å‚ï¿½ï¿½å‚¤ï¿½j  
+    (id, 'unReadable'):ï¿½ÊMï¿½Â‹ï¿½ï¿½ÉˆÈã‚ªï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½Ìê‡ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì“dï¿½ï¿½ï¿½ï¿½ï¿½Ø‚ï¿½Ä‚ï¿½ï¿½ï¿½È‚Ç‚ÌŒï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½  
 
     def set_torque_limit(id, limit)
-ƒgƒ‹ƒNƒŠƒ~ƒbƒg‚ðÝ’è‚µ‚Ü‚·    
- E  `id` :  
-    Ý’è‚ðs‚¤ƒT[ƒ{ƒ‚[ƒ^‚ÌID‚ðŽw’è‚µ‚Ü‚·BID‚Í1~127‚ÌŠÔ‚ÅŽw’è‚·‚é•K—v‚ª‚ ‚è‚Ü‚·  
- E  `limit` :  
-    ƒT[ƒ{ƒ‚[ƒ^‚Ì‹KŠi‚ÉÅ‘åƒgƒ‹ƒN‚ð100 [%]‚Æ‚·‚é‚ÆA1[%]’PˆÊ‚ÅÝ’è‚Å‚«‚Ü‚·  
- E  `return` :    
-    (id, 'ACK'):³í‚É–½—ß‚ª“`’B‚Ä‚¢‚Ü‚·  
-    (id, 'NACK)':ƒRƒ}ƒ“ƒh‚ª³‚µ‚­Ý’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñi’Êí‚Ì—˜—p‚Å‚ÍŒ©‚é‚±‚Æ‚Í‚È‚¢‚Å‚µ‚å‚¤j  
-    (id, 'unReadable'):’ÊMŠÂ‹«‚ÉˆÈã‚ª‚ ‚è‚Ü‚·B‘½‚­‚Ìê‡ƒT[ƒ{ƒ‚[ƒ^‚Ì“dŒ¹‚ªØ‚ê‚Ä‚¢‚é‚È‚Ç‚ÌŒ´ˆö‚ªl‚¦‚ç‚ê‚Ü‚· 
+ï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½~ï¿½bï¿½gï¿½ï¿½Ý’è‚µï¿½Ü‚ï¿½    
+ ï¿½E  `id` :  
+    ï¿½Ý’ï¿½ï¿½sï¿½ï¿½ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½ï¿½wï¿½è‚µï¿½Ü‚ï¿½ï¿½BIDï¿½ï¿½1~127ï¿½ÌŠÔ‚ÅŽwï¿½è‚·ï¿½ï¿½Kï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½  
+ ï¿½E  `limit` :  
+    ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì‹Kï¿½iï¿½ÉÅ‘ï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½100 [%]ï¿½Æ‚ï¿½ï¿½ï¿½ÆA1[%]ï¿½Pï¿½Ê‚ÅÝ’ï¿½Å‚ï¿½ï¿½Ü‚ï¿½  
+ ï¿½E  `return` :    
+    (id, 'ACK'):ï¿½ï¿½ï¿½ï¿½É–ï¿½ï¿½ß‚ï¿½ï¿½`ï¿½Bï¿½Ä‚ï¿½ï¿½Ü‚ï¿½  
+    (id, 'NACK)':ï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý’è‚³ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½iï¿½Êï¿½Ì—ï¿½ï¿½pï¿½Å‚ÍŒï¿½ï¿½é‚±ï¿½Æ‚Í‚È‚ï¿½ï¿½Å‚ï¿½ï¿½å‚¤ï¿½j  
+    (id, 'unReadable'):ï¿½ÊMï¿½Â‹ï¿½ï¿½ÉˆÈã‚ªï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½Ìê‡ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì“dï¿½ï¿½ï¿½ï¿½ï¿½Ø‚ï¿½Ä‚ï¿½ï¿½ï¿½È‚Ç‚ÌŒï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ 
   
     def set_damper(id, damper)
-ƒ_ƒ“ƒp‚ðÝ’è‚µ‚Ü‚·  
- E  `id` :  
-    Ý’è‚ðs‚¤ƒT[ƒ{ƒ‚[ƒ^‚ÌID‚ðŽw’è‚µ‚Ü‚·BID‚Í1~127‚ÌŠÔ‚ÅŽw’è‚·‚é•K—v‚ª‚ ‚è‚Ü‚·  
- E  `damper` :  
-    ƒnƒ“ƒ`ƒ“ƒO‚ð‹N‚±‚è‚É‚­‚­‚·‚éŒø‰Ê‚ª‚ ‚è‚Ü‚·B0`255‚ÌŠÔ‚ÅÝ’è‚µ‚Ä‰º‚³‚¢  
- E  `return` :    
-    (id, 'ACK'):³í‚É–½—ß‚ª“`’B‚Ä‚¢‚Ü‚·  
-    (id, 'NACK)':ƒRƒ}ƒ“ƒh‚ª³‚µ‚­Ý’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñi’Êí‚Ì—˜—p‚Å‚ÍŒ©‚é‚±‚Æ‚Í‚È‚¢‚Å‚µ‚å‚¤j  
-    (id, 'unReadable'):’ÊMŠÂ‹«‚ÉˆÈã‚ª‚ ‚è‚Ü‚·B‘½‚­‚Ìê‡ƒT[ƒ{ƒ‚[ƒ^‚Ì“dŒ¹‚ªØ‚ê‚Ä‚¢‚é‚È‚Ç‚ÌŒ´ˆö‚ªl‚¦‚ç‚ê‚Ü‚·  
+ï¿½_ï¿½ï¿½ï¿½pï¿½ï¿½Ý’è‚µï¿½Ü‚ï¿½  
+ ï¿½E  `id` :  
+    ï¿½Ý’ï¿½ï¿½sï¿½ï¿½ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½ï¿½wï¿½è‚µï¿½Ü‚ï¿½ï¿½BIDï¿½ï¿½1~127ï¿½ÌŠÔ‚ÅŽwï¿½è‚·ï¿½ï¿½Kï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½  
+ ï¿½E  `damper` :  
+    ï¿½nï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½Oï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê‚ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B0ï¿½`255ï¿½ÌŠÔ‚ÅÝ’è‚µï¿½Ä‰ï¿½ï¿½ï¿½ï¿½ï¿½  
+ ï¿½E  `return` :    
+    (id, 'ACK'):ï¿½ï¿½ï¿½ï¿½É–ï¿½ï¿½ß‚ï¿½ï¿½`ï¿½Bï¿½Ä‚ï¿½ï¿½Ü‚ï¿½  
+    (id, 'NACK)':ï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý’è‚³ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½iï¿½Êï¿½Ì—ï¿½ï¿½pï¿½Å‚ÍŒï¿½ï¿½é‚±ï¿½Æ‚Í‚È‚ï¿½ï¿½Å‚ï¿½ï¿½å‚¤ï¿½j  
+    (id, 'unReadable'):ï¿½ÊMï¿½Â‹ï¿½ï¿½ÉˆÈã‚ªï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½Ìê‡ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì“dï¿½ï¿½ï¿½ï¿½ï¿½Ø‚ï¿½Ä‚ï¿½ï¿½ï¿½È‚Ç‚ÌŒï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½  
 
-    def set_compliance(id, cwcm, ccwcm, cwcs, ccwcs, punch)  @
-ƒRƒ“ƒvƒ‰ƒCƒAƒ“ƒXƒ}[ƒWƒ“‚È‚Ç‚ðÝ’è‚µ‚Ü‚·  
- E  `id` :  
-    Ý’è‚ðs‚¤ƒT[ƒ{ƒ‚[ƒ^‚ÌID‚ðŽw’è‚µ‚Ü‚·BID‚Í1~127‚ÌŠÔ‚ÅŽw’è‚·‚é•K—v‚ª‚ ‚è‚Ü‚·  
- E  `cwcm` :CW Compliance Margin  
-    CWiŽžŒv‰ñ‚èj•ûŒü‚ÌƒT[ƒ{‚Ì’âŽ~ˆÊ’u[0.1 degree]‚Ì‹–—e”ÍˆÍ‚ðÝ’è‚µ‚Ü‚·B0`255‚ÌŠÔ‚ÅÝ’è‚µ‚Ä‰º‚³‚¢  
- E  `ccwcm` :CCW Compliance Margin  
-    CCWi”½ŽžŒv‰ñ‚èjƒT[ƒ{‚Ì’âŽ~ˆÊ’u[0.1 degree]‚Ì‹–—e”ÍˆÍ‚ðÝ’è‚µ‚Ü‚·B0`255‚ÌŠÔ‚ÅÝ’è‚µ‚Ä‰º‚³‚¢  
- E  `cwcs` :CW Compliance Slope  
-    CWiŽžŒv‰ñ‚èj•ûŒü‚ÌŒ»ÝˆÊ’u‚Æ–Ú•WˆÊ’u‚ÌŒë·C³ƒgƒ‹ƒN‚ÌÝ’èB0`255‚ÌŠÔ‚ÅÝ’è‚µ‚Ä‰º‚³‚¢  
- E  `ccwcs` :CCW Compliance Slope  
-    CCWi”½ŽžŒv‰ñ‚èj•ûŒü‚ÌŒ»ÝˆÊ’u‚Æ–Ú•WˆÊ’u‚ÌŒë·C³ƒgƒ‹ƒN‚ÌÝ’èB0`255‚ÌŠÔ‚ÅÝ’è‚µ‚Ä‰º‚³‚¢  
- E  `punch` :    
-    ƒ‚[ƒ^‹ì“®Žž‚ÌÅ¬“d—¬‚ðÝ’è‚Å‚«‚Ü‚·BÝ’è’l‚Ì’PˆÊ‚ÍÅ‘åƒgƒ‹ƒN‚Ì0.001%‚ÅA0`10000‚ÌŠÔ‚ÅÝ’è‚µ‚Ä‰º‚³‚¢  
- E  `return` :    
-    (id, 'ACK'):³í‚É–½—ß‚ª“`’B‚Ä‚¢‚Ü‚·  
-    (id, 'NACK)':ƒRƒ}ƒ“ƒh‚ª³‚µ‚­Ý’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñi’Êí‚Ì—˜—p‚Å‚ÍŒ©‚é‚±‚Æ‚Í‚È‚¢‚Å‚µ‚å‚¤j  
-    (id, 'unReadable'):’ÊMŠÂ‹«‚ÉˆÈã‚ª‚ ‚è‚Ü‚·B‘½‚­‚Ìê‡ƒT[ƒ{ƒ‚[ƒ^‚Ì“dŒ¹‚ªØ‚ê‚Ä‚¢‚é‚È‚Ç‚ÌŒ´ˆö‚ªl‚¦‚ç‚ê‚Ü‚·
+    def set_compliance(id, cwcm, ccwcm, cwcs, ccwcs, punch)  ï¿½@
+ï¿½Rï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Cï¿½Aï¿½ï¿½ï¿½Xï¿½}ï¿½[ï¿½Wï¿½ï¿½ï¿½È‚Ç‚ï¿½Ý’è‚µï¿½Ü‚ï¿½  
+ ï¿½E  `id` :  
+    ï¿½Ý’ï¿½ï¿½sï¿½ï¿½ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½IDï¿½ï¿½wï¿½è‚µï¿½Ü‚ï¿½ï¿½BIDï¿½ï¿½1~127ï¿½ÌŠÔ‚ÅŽwï¿½è‚·ï¿½ï¿½Kï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½  
+ ï¿½E  `cwcm` :CW Compliance Margin  
+    CWï¿½iï¿½ï¿½ï¿½vï¿½ï¿½ï¿½jï¿½ï¿½ï¿½ÌƒTï¿½[ï¿½{ï¿½Ì’ï¿½~ï¿½Ê’u[0.1 degree]ï¿½Ì‹ï¿½ï¿½eï¿½ÍˆÍ‚ï¿½Ý’è‚µï¿½Ü‚ï¿½ï¿½B0ï¿½`255ï¿½ÌŠÔ‚ÅÝ’è‚µï¿½Ä‰ï¿½ï¿½ï¿½ï¿½ï¿½  
+ ï¿½E  `ccwcm` :CCW Compliance Margin  
+    CCWï¿½iï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½jï¿½Tï¿½[ï¿½{ï¿½Ì’ï¿½~ï¿½Ê’u[0.1 degree]ï¿½Ì‹ï¿½ï¿½eï¿½ÍˆÍ‚ï¿½Ý’è‚µï¿½Ü‚ï¿½ï¿½B0ï¿½`255ï¿½ÌŠÔ‚ÅÝ’è‚µï¿½Ä‰ï¿½ï¿½ï¿½ï¿½ï¿½  
+ ï¿½E  `cwcs` :CW Compliance Slope  
+    CWï¿½iï¿½ï¿½ï¿½vï¿½ï¿½ï¿½jï¿½ï¿½ï¿½ÌŒï¿½ï¿½ÝˆÊ’uï¿½Æ–Ú•Wï¿½Ê’uï¿½ÌŒë·ï¿½Cï¿½ï¿½ï¿½gï¿½ï¿½ï¿½Nï¿½ÌÝ’ï¿½B0ï¿½`255ï¿½ÌŠÔ‚ÅÝ’è‚µï¿½Ä‰ï¿½ï¿½ï¿½ï¿½ï¿½  
+ ï¿½E  `ccwcs` :CCW Compliance Slope  
+    CCWï¿½iï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½jï¿½ï¿½ï¿½ÌŒï¿½ï¿½ÝˆÊ’uï¿½Æ–Ú•Wï¿½Ê’uï¿½ÌŒë·ï¿½Cï¿½ï¿½ï¿½gï¿½ï¿½ï¿½Nï¿½ÌÝ’ï¿½B0ï¿½`255ï¿½ÌŠÔ‚ÅÝ’è‚µï¿½Ä‰ï¿½ï¿½ï¿½ï¿½ï¿½  
+ ï¿½E  `punch` :    
+    ï¿½ï¿½ï¿½[ï¿½^ï¿½ì“®ï¿½ï¿½ï¿½ÌÅï¿½ï¿½dï¿½ï¿½ï¿½ï¿½Ý’ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½Ý’ï¿½lï¿½Ì’Pï¿½Ê‚ÍÅ‘ï¿½gï¿½ï¿½ï¿½Nï¿½ï¿½0.001%ï¿½ÅA0ï¿½`10000ï¿½ÌŠÔ‚ÅÝ’è‚µï¿½Ä‰ï¿½ï¿½ï¿½ï¿½ï¿½  
+ ï¿½E  `return` :    
+    (id, 'ACK'):ï¿½ï¿½ï¿½ï¿½É–ï¿½ï¿½ß‚ï¿½ï¿½`ï¿½Bï¿½Ä‚ï¿½ï¿½Ü‚ï¿½  
+    (id, 'NACK)':ï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý’è‚³ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½iï¿½Êï¿½Ì—ï¿½ï¿½pï¿½Å‚ÍŒï¿½ï¿½é‚±ï¿½Æ‚Í‚È‚ï¿½ï¿½Å‚ï¿½ï¿½å‚¤ï¿½j  
+    (id, 'unReadable'):ï¿½ÊMï¿½Â‹ï¿½ï¿½ÉˆÈã‚ªï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½Bï¿½ï¿½ï¿½ï¿½ï¿½Ìê‡ï¿½Tï¿½[ï¿½{ï¿½ï¿½ï¿½[ï¿½^ï¿½Ì“dï¿½ï¿½ï¿½ï¿½ï¿½Ø‚ï¿½Ä‚ï¿½ï¿½ï¿½È‚Ç‚ÌŒï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½
 
-ƒ‰ƒCƒZƒ“ƒX
+ï¿½ï¿½ï¿½Cï¿½Zï¿½ï¿½ï¿½X
 ----------
 Copyright &copy; 2012 Hiroaki Matsuda  
 Licensed under the [Apache License, Version 2.0][Apache]  
