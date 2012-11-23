@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # This module provides a class that controls the serial servo motor manufactured by Futaba Corp.
-# ver1.21121
+# ver1.21122
 # This module has been tested on python ver.2.6.6
 # It need pySerial(http://pyserial.sourceforge.net/)
 # (C) 2012 Matsuda Hiroaki
@@ -13,7 +13,7 @@ class Rs(object):
         def __init__(self):
                 self.myserial = serial.Serial()
                 print('Generated the serial object')
-	
+
         def open_port(self, port = 'COM1', baudrate = 115200, timeout = 1):
                 self.myserial.port = port
                 self.myserial.baudrate = baudrate
@@ -215,7 +215,7 @@ class Rs(object):
         def _write_command(self, send):
                 self.myserial.flushOutput()
                 self.myserial.flushInput()
-                self.myserial.write(bytearray(send[0:]))
+                self.myserial.write("".join(map(chr, send)))
 
 if __name__ == '__main__':
         import pyrs
@@ -230,4 +230,3 @@ if __name__ == '__main__':
         time.sleep(1)
         rs.torque_on(1, 0)  
         rs.close_port()
-        
