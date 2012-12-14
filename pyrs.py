@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # This module provides a class that controls the serial servo motor manufactured by Futaba Corp.
-# ver1.21122
+# ver1.21213
 # This module has been tested on python ver.2.6.6
 # It need pySerial(http://pyserial.sourceforge.net/)
 # (C) 2012 Matsuda Hiroaki
@@ -13,6 +13,7 @@ class Rs(object):
         def __init__(self):
                 self.myserial = serial.Serial()
                 print('Generated the serial object')
+                self.mode = 'normal'
 
         def open_port(self, port = 'COM1', baudrate = 115200, timeout = 1):
                 self.myserial.port = port
@@ -42,7 +43,7 @@ class Rs(object):
                 send = [0xFA, 0xAF, id, 0x01, 0x24, 0x01, 0x01, mode & 0x00FF]
                 send.append(self._calc_checksum(send))
 
-                self._write_command(send)
+                self._write_serial(send, 1)
 
                 return self._check_ack(id)    
   
@@ -55,7 +56,7 @@ class Rs(object):
                         (position & 0xFF00) >> 8, time & 0x00FF, (time & 0xFF00) >> 8]
                 send.append(self._calc_checksum(send))
                 
-                self._write_command(send)
+                self._write_serial(send, 1)
 
                 return self._check_ack(id)
         
@@ -70,7 +71,7 @@ class Rs(object):
                         send.append(servo[1])
                 send.append(self._calc_checksum(send))
                 
-                self._write_command(send)
+                self._write_serial(send, 0)
 
                 return 'multi_torque_on:' + str(servo_data)
 
@@ -89,7 +90,7 @@ class Rs(object):
                         send.append((servo[2] & 0xFF00) >> 8)
                 send.append(self._calc_checksum(send))
                 
-                self._write_command(send)
+                self._write_serial(send, 0)
 
                 return 'multi_target_position:' + str(servo_data)
 
@@ -106,8 +107,8 @@ class Rs(object):
                 
                 send = [0xFA, 0xAF, id, 0x09, 0x00, 0x00, 0x01]
                 send.append(self._calc_checksum(send))
-                
-                self._write_command(send)
+
+                self._write_serial(send, 26)
               
                 receive = self.myserial.read(26)
                 try:
@@ -145,7 +146,7 @@ class Rs(object):
                 send = [0xFA, 0xAF, id, 0x20, 0xFF, 0x00, 0x00]
                 send.append(self._calc_checksum(send))
                 
-                self._write_command(send)
+                self._write_serial(send, 0)
 
         def set_torque_limit(self, id, limit = 100):
                 self._check_range(id    , 1, 127, 'id')
@@ -154,7 +155,7 @@ class Rs(object):
                 send = [0xFA, 0xAF, id, 0x01, 0x23, 0x01, 0x01, limit & 0x00FF]
                 send.append(self._calc_checksum(send))
                 
-                self._write_command(send)
+                self._write_serial(send, 1)
 
                 return self._check_ack(id)
 
@@ -165,7 +166,7 @@ class Rs(object):
                 send = [0xFA, 0xAF, id, 0x01, 0x20, 0x01, 0x01, damper & 0x00FF]
                 send.append(self._calc_checksum(send))
                 
-                self._write_command(send)
+                self._write_serial(send, 1)
 
                 return self._check_ack(id)
 
@@ -180,10 +181,16 @@ class Rs(object):
                 send = [0xFA, 0xAF, id, 0x01, 0x18, 0x06, 0x01, cwcm & 0x00FF, ccwcm & 0x00FF,
                         cwcs&0x00FF, ccwcs & 0x00FF, punch & 0x00FF, (punch & 0xFF00) >> 8]
                 send.append(self._calc_checksum(send))
-                
-                self._write_command(send)
+
+                self._write_serial(send, 1)
 
                 return self._check_ack(id)
+
+        def set_rpu(self):
+                self.mode = 'rpu'
+
+        def set_normal(self):
+                self.mode = 'normal'
                 
 # The following functions are provided for use in PRS class
         def _calc_checksum(self, send):
@@ -212,21 +219,46 @@ class Rs(object):
                 elif length != 1:
                         return id, 'unReadable'
 
+        def _write_rpu(self, send, length):
+                if length == 0:
+                        send_rpu = [0x53, len(send)]
+                        send_rpu += send
+                else:                      
+                        send_rpu = [0x54, len(send) + 1]
+                        send_rpu += send
+                        send_rpu.append(length)
+                        
+                self.myserial.flushOutput()
+                self.myserial.flushInput()
+                self.myserial.write("".join(map(chr, send_rpu)))
+
         def _write_command(self, send):
                 self.myserial.flushOutput()
                 self.myserial.flushInput()
                 self.myserial.write("".join(map(chr, send)))
 
+        def _write_serial(self, send, length):
+                if self.mode == 'rpu':
+                        self._write_rpu(send, length)
+
+                else:
+                        self._write_command(send)
+                
+
 if __name__ == '__main__':
-        import pyrs
+        import pyrs_rpu11
         import time
-        rs = pyrs.Rs()
-        rs = pyrs.Rs()  
-        rs.open_port('COM11', 115200, 1 )   
-        rs.torque_on(1, 1)
-        rs.target_position(1, 900, 200)
+        rs = pyrs_rpu11.Rs()  
+        rs.open_port('COM9', 115200, 1 )
+        
+        rs.set_rpu()
+
+        rs.torque_on(2, 1)
+        rs.target_position(2, 900, 200)
         time.sleep(1)
-        print rs.get_data(1, 'angle')
+
+        print rs.get_data(2, 'angle')
         time.sleep(1)
-        rs.torque_on(1, 0)  
+
+        rs.torque_on(2, 0)  
         rs.close_port()
