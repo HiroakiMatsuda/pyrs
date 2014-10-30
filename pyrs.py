@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # This module provides a class that controls the serial servo motor manufactured by Futaba Corp.
-# ver1.21213
+# ver1.40716
 # This module has been tested on python ver.2.6.6
 # It need pySerial(http://pyserial.sourceforge.net/)
 # (C) 2012 Matsuda Hiroaki
@@ -30,35 +30,61 @@ class Rs(object):
         def close_port(self):
                 self.myserial.close()
 
-        def set_port(self, baudrate = 115200, timeout = 1):
+        def set_port(self, baudrate = 115200, timeout = 0x01):
                 self.myserial.baudrate = baudrate
                 self.myserial.timeout = timeout
                 self.myserial._reconfigurePort()
                 print('Succeede to set baudrate:%d, timeout:%d' %(baudrate, timeout))
                    
-        def torque_on(self, id, mode):
-                self._check_range(id  , 1, 127, 'id')
-                self._check_range(mode, 0, 2  , 'mode')
+        def torque_on(self, id, mode, return_packet = 0x01):
+                self._check_range(id           , 1, 127, 'id')
+                self._check_range(mode         , 0, 2  , 'mode')
+                self._check_range(return_packet, 0, 15 , 'return_packet')
                 
-                send = [0xFA, 0xAF, id, 0x01, 0x24, 0x01, 0x01, mode & 0x00FF]
+                send = [0xFA,
+                        0xAF,
+                        id,
+                        return_packet,
+                        0x24,
+                        0x01,
+                        0x01,
+                        mode & 0x00FF]
                 send.append(self._calc_checksum(send))
 
-                self._write_serial(send, 1)
+                self._write_serial(send, return_packet)
 
-                return self._check_ack(id)    
+                if return_packet == 0x00:
+                        return id, 0x00
+
+                elif return_packet == 0x01:                   
+                        return self._check_ack(id)    
   
-        def target_position(self, id, position, time):
-                self._check_range(id      , 1    , 127  , 'id')
-                self._check_range(position, -1500, 1500 , 'position')
-                self._check_range(time    , 0    , 16383, 'time')
+        def target_position(self, id, position, time, return_packet = 0x01):
+                self._check_range(id           , 1    , 127  , 'id')
+                self._check_range(position     , -1500, 1500 , 'position')
+                self._check_range(time         , 0    , 16383, 'time')
+                self._check_range(return_packet, 0    , 15   , 'return_packet')
                 
-                send = [0xFA, 0xAF, id, 0x01, 0x1E, 0x04, 0x01, position & 0x00FF,
-                        (position & 0xFF00) >> 8, time & 0x00FF, (time & 0xFF00) >> 8]
+                send = [0xFA,
+                        0xAF,
+                        id,
+                        return_packet,
+                        0x1E,
+                        0x04,
+                        0x01,
+                        position & 0x00FF,
+                        (position & 0xFF00) >> 8,
+                        time & 0x00FF,
+                        (time & 0xFF00) >> 8]
                 send.append(self._calc_checksum(send))
                 
-                self._write_serial(send, 1)
+                self._write_serial(send, return_packet)
 
-                return self._check_ack(id)
+                if return_packet == 0x00:
+                        return id, 0x00
+
+                elif return_packet == 0x01:                   
+                        return self._check_ack(id)  
         
         def multi_torque_on(self, servo_data):
                 for servo in servo_data:
@@ -246,19 +272,33 @@ class Rs(object):
                 
 
 if __name__ == '__main__':
-        import pyrs_rpu11
+        import pyrs
         import time
-        rs = pyrs_rpu11.Rs()  
-        rs.open_port('COM9', 115200, 1 )
+        rs = pyrs.Rs()  
+        rs.open_port('COM8', 115200, 1 )
         
-        rs.set_rpu()
+        #rs.set_rpu()
 
-        rs.torque_on(2, 1)
-        rs.target_position(2, 900, 200)
+        for i in range(20):
+                print rs.torque_on(i + 1, 1, 0)
+
+        time.sleep(5)
+
+        for i in range(20):
+                print rs.target_position(i + 1, 0, 200, 0)
+
+        time.sleep(10)
+
+        for i in range(20):
+                print rs.torque_on(i + 1, 0, 0)
+
+        #print rs.torque_on(1, 1, 0)
+        #print rs.target_position(1, -1000, 200, 0)
+        #time.sleep(1)
+
+        #print rs.get_data(1, 'angle')
+        #time.sleep(1)
+
+        #print rs.torque_on(1, 0, 0)
         time.sleep(1)
-
-        print rs.get_data(2, 'angle')
-        time.sleep(1)
-
-        rs.torque_on(2, 0)  
         rs.close_port()
